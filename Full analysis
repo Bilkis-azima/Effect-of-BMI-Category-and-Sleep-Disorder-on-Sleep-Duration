@@ -1,0 +1,90 @@
+Title: Effect of BMI Category and Sleep Disorder on Sleep Duration
+
+	Introduction of the data set
+
+Sleep is an essential component of overall health and well-being. Various factors such as body composition and medical conditions can influence sleep patterns. This study investigates whether BMI category and sleep disorder status affect sleep duration, and whether there is an interaction between these two variables.
+
+Variables
+	Dependent Variable:
+Sleep Duration (continuous, measured in hours) 
+	Independent Variables: 
+	BMI Category (Normal, Overweight, Obese) 
+	Sleep Disorder (None, Insomnia, Sleep Apnea)
+Research questions 
+1- Does BMI category affect sleep duration? 
+2- Does sleep disorder affect sleep duration, and is there an interaction between BMI category and sleep disorder?
+	Hypotheses 
+BMI Category:
+H_0: Mean sleep duration is the same for all BMI categories 
+H_a: At least one BMI category has a different mean sleep duration 
+Sleep Disorder:
+H_0: Mean sleep duration is the same across sleep disorder groups 
+H_a: At least one group differs 
+Interaction:
+H_0: There is no interaction between BMI category and sleep disorder 
+H_a: There is an interaction 
+
+	Methodology
+A two-way ANOVA was conducted to examine the effects of BMI category and sleep disorder on sleep duration. This method is appropriate because:
+	The dependent variable is continuous 
+	There are two categorical independent variables 
+	It allows testing of both main effects and interaction effects
+
+	Results
+Research question 1: Does BMI category affect sleep duration?
+
+	H_0: Mean sleep duration is the same for all BMI categories 
+	H_a: At least one BMI category has a different mean sleep duration 
+Test statistics
+P-value: 1.1e-13
+F-statistic: 32.408
+Conclusion:
+Since the p-value is 1.1e-13 and less than 0.05, we reject H_0.
+There is strong statistical evidence to conclude that BMI category affects sleep duration.
+
+Research Question 2: Does sleep disorder affect sleep duration, and is there an interaction between BMI category and sleep disorder?
+	H_0: Mean sleep duration is the same across sleep disorder groups 
+	H_a: At least one group differs 
+Test statistics
+P-value: 0.00027
+F-statistic: 8.404
+Conclusions
+Since the p-value 0.00027 is less than 0.05, we reject H_0. We have enough evidence to conclude that sleep disorders have a significant effect on sleep duration.
+
+Interaction between BMI category and sleep disorder?
+	H_0: There is no interaction between BMI category and sleep disorder 
+	H_a: There is an interaction 
+Test statistics
+P-value: 0.17199
+F-statistic: 1.675
+Conclusions
+Since the p-value 0.17199 is greater than 0.05, we fail to reject H_0.
+ There is no significant interaction between BMI category and sleep disorder. Both BMI category and sleep disorder independently affect sleep duration,
+but they do not interact with each other.
+
+	Post-Hoc Analysis (Tukey Test)
+The Tukey multiple comparison test showed that:
+	Individuals in the overweight category have significantly lower sleep duration compared to those with normal BMI 
+	No significant differences were found between other BMI groups
+	GRAPH
+Sleep duration varies across BMI categories and sleep disorder groups, with individuals without sleep disorders generally sleeping more and those with insomnia sleeping less. Although the lines are not perfectly parallel, the interaction is not statistically significant because p value = 0.17199
+ 
+	Limitations
+	Some remaining data may influence results
+	The dataset may not be randomly sampled
+	Other variables (age, stress, lifestyle) were not used
+
+	CONCLUSION
+The analysis revealed that both BMI category and sleep disorder have statistically significant effects on sleep duration.
+Post-hoc analysis using Tukey’s test showed that:
+	Individuals in the overweight category have significantly lower sleep duration compared to those with normal BMI 
+	Other pairwise comparisons were not statistically significant 
+	Individuals with sleep disorders such as insomnia and sleep apnea tend to have reduced sleep duration 
+The interaction between BMI category and sleep disorder was not significant, suggesting that these two factors independently influence sleep duration rather than jointly.
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+data <- read.csv("C:/Users/fosso/Downloads/data set.csv")
+
+# Clean BMI
+data$BMI.Category <- trimws(data$BMI.Category)
+data$BMI.Category[data$BMI.Category == "Normal Weight"] <- "Normal"
+data$BMI.Category <- factor(data$BMI.Category,
+                            levels = c("Normal", "Overweight", "Obese"))
+
+# Clean Sleep Disorder
+data$Sleep.Disorder <- as.factor(data$Sleep.Disorder)
+data$Sleep.Disorder <- relevel(data$Sleep.Disorder, ref = "None")
+
+# ANOVA
+model <- aov(Sleep.Duration ~ BMI.Category * Sleep.Disorder, data = data)
+summary(model)
+
+# Tukey tests
+TukeyHSD(model, "BMI.Category")
+TukeyHSD(model, "Sleep.Disorder")
+
+# Interaction plot (BEST)
+interaction.plot(data$BMI.Category,
+                 data$Sleep.Disorder,
+                 data$Sleep.Duration,
+                 col = c("blue", "red", "green"),
+                 lwd = 2)
